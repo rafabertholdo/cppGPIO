@@ -66,28 +66,28 @@ void GPIO::setOutputDirection() {
 }
 
 void GPIO::exportGPIO() {
-    writeFile("/sys/class/gpio/export", this->m_GPIONum);
+    writeFile("/sys/class/gpio/export", m_GPIONum);
 }
 
 void GPIO::unexportGPIO() {
-    writeFile("/sys/class/gpio/unexport", this->m_GPIONum);
+    writeFile("/sys/class/gpio/unexport", m_GPIONum);
 }
 
 void GPIO::setDirection(const string& direction) {
     if (m_streamGood) {
-        writeFile("/sys/class/gpio/gpio" + this->m_GPIONum + "/direction", direction);
+        writeFile("/sys/class/gpio/gpio" + m_GPIONum + "/direction", direction);
     }
 }
 
 void GPIO::setValue(const bool& value) {
     if (m_streamGood && m_direction == GPIODirection::output) {
-        writeFile("/sys/class/gpio/gpio" + this->m_GPIONum + "/value", value ? "0" : "1");
+        writeFile("/sys/class/gpio/gpio" + m_GPIONum + "/value", value ? "0" : "1");
     }
 }
 
 const bool GPIO::getValue() {
     if (m_streamGood && m_direction == GPIODirection::input) {
-        string value = readFile("/sys/class/gpio/gpio" + this->m_GPIONum + "/value");
+        string value = readFile("/sys/class/gpio/gpio" + m_GPIONum + "/value");
         return value != "0";
     } else {
         return false;

@@ -7,8 +7,8 @@ using namespace std;
 
 int main (void) {
     bool inputstate;
-    GPIO gpio4 = GPIO("4", GPIODirection::output);
-    GPIO gpio17 = GPIO("17", GPIODirection::input);
+    GPIO gpio4("4", GPIODirection::output);
+    GPIO gpio17("17", GPIODirection::input);
 
     if (gpio4.isStreamGood() && gpio17.isStreamGood()) {
         while (1) {

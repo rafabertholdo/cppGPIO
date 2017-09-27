@@ -8,15 +8,16 @@ enum class GPIODirection {
     output
 };
 
-/* GPIO Class
- * Purpose: Each object instantiated from this class will control a GPIO pin
- * The GPIO pin number must be passed to the overloaded class constructor
+/* GPIO 
+ * Purpose: Each object instantiated from this class will control a GPIO pin 
  */
 class GPIO
 {
 public:
     GPIO(const std::string& x, const GPIODirection direction);
     ~GPIO();
+    GPIO(GPIO const&)            = delete;
+    void operator=(GPIO const&)  = delete;
 
     const std::string& GPIONum();
     const GPIODirection& direction();

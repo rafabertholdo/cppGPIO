@@ -17,7 +17,7 @@ cd build
  * run cmake and build
  ```
 cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release ..
-make -j 8
+make -j 2
 ```
 
 ### generated files ###

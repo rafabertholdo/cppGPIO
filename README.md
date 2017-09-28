@@ -43,4 +43,4 @@ $ sudo example1
         std::this_thread::sleep_for(std::chrono::milliseconds(200));
     }
 ```
->Programing is moving zeros and ones for one place to another.
+>Programming is moving zeros and ones from one place to another.

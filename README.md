@@ -5,7 +5,7 @@ cppGPIO is as library for writing and reading the Raspberry Pi GPIO, writen in C
 ### How to compile. ###
  * Update apt-get
 ```sudo apt-get update```
-* Install build essential tools (wich includes g++)
+* Install build essential tools (which includes g++)
 ```sudo apt-get install build-essential```
  * Install CMake
   ```sudo apt-get install cmake```

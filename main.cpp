@@ -10,10 +10,10 @@ int main (void) {
 
     GPIO gpio18("18", GPIODirection::output);
     GPIO gpio17("17", GPIODirection::input);
-    
+
     int hitCount =0;
     int maxHitCount = 0;
-     
+
     cout << "How many button presses: ";
     cin >> maxHitCount;
 

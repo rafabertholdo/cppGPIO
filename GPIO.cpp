@@ -89,7 +89,7 @@ void GPIO::setValue(const bool value) {
 }
 
 const bool GPIO::getValue() {
-    if (m_streamGood && m_direction == GPIODirection::input) {
+    if (m_streamGood) {
         string value = readFile("/sys/class/gpio/gpio" + m_GPIONum + "/value");
         return value != "0";
     } else {
